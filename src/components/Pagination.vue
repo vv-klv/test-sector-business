@@ -47,14 +47,23 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1077px;
+    width: auto;
+    max-width: 1077px;
     margin-top: 24px;
     padding: 0 30px;
     color: $color-grey-900;
 
+    @media (max-width: 575px) {
+        padding: 0;
+    }
+
     &__btn {
         font-size: $text-xl;
         cursor: pointer;
+
+        @media (max-width: 575px) {
+            font-size: $text-lg;
+        }
 
         &:hover {
             color: $color-green;
@@ -64,8 +73,14 @@ export default {
 
     &__pages {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         flex-direction: row;
         cursor: pointer;
+
+        @media (max-width: 425px) {
+            width: 130px;
+        }
     }
 
     &__page {
@@ -73,6 +88,11 @@ export default {
         font-weight: 700;
         font-size: $text-lg;
         color: $color-grey-900;
+
+        @media (max-width: 575px) {
+            margin: 3px 8px;
+            font-size: $text-md;
+        }
 
         &:hover {
             color: $color-green;

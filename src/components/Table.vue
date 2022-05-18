@@ -105,7 +105,8 @@ export default {
 
 .table {
     margin-top: 15px;
-    width: 1077px;
+    width: 100%;
+    max-width: 1077px;
 }
 
 .header {
@@ -117,6 +118,7 @@ export default {
     &__cell {
         cursor: pointer;
         border-bottom: none;
+        padding: 0 5px !important;
 
         &:hover {
             background-color: darken($color-grey-900, 3);
@@ -125,9 +127,18 @@ export default {
         &:first-child {
             width: 100px;
             text-align: center;
+
+            @media (max-width: 1024px) {
+                width: 60px;
+            }
+
+            @media (max-width: 425px) {
+                width: 50px;
+            }
         }
+
         &:last-child {
-            width: 432px;
+            max-width: 432px;
         }
     }
 
@@ -135,6 +146,14 @@ export default {
         height: 7px;
         margin-left: 30px;
         transition: transform .2s linear;
+
+        @media (max-width: 1024px) {
+            margin-left: 15px;
+        }
+
+        @media (max-width: 425px) {
+            margin-left: 5px;
+        }
     }
 }
 
@@ -169,6 +188,4 @@ tr td {
     transform: rotate(180deg);
     transition: transform .2s linear;
 }
-
-
 </style>

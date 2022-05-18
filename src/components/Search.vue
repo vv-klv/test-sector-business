@@ -31,7 +31,8 @@ export default {
 .search {
     display: flex;
     position: relative;
-    width: 631px;
+    max-width: 631px;
+    width: 100%;
     height: 52px;
     align-items: center;
 

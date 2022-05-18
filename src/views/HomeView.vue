@@ -74,6 +74,18 @@ export default {
     margin: 0 auto;
     padding: 24px 78px 12px;
     box-shadow: 0 4px 27px rgba(230, 231, 234, 0.78);
+
+    @media (max-width: 1280px) {
+        width: 1024px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 </style>
