@@ -139,6 +139,10 @@ export default {
 
         &:last-child {
             max-width: 432px;
+
+            @media (min-width: 1024px) {
+                width: 432px;
+            }
         }
     }
 
